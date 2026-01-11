@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="payment_form" name="Monnify Payment Form">
+        <div class="monnify-payment-container">
+            <input type="hidden" name="monnify_api_key" t-att-value="api_key"/>
+            <input type="hidden" name="monnify_contract_code" t-att-value="contract_code"/>
+            <input type="hidden" name="monnify_reference" t-att-value="monnify_reference"/>
+            <input type="hidden" name="amount" t-att-value="amount"/>
+            <input type="hidden" name="currency" t-att-value="currency"/>
+            <input type="hidden" name="customer_name" t-att-value="customer_name"/>
+            <input type="hidden" name="customer_email" t-att-value="customer_email"/>
+            <input type="hidden" name="reference" t-att-value="reference"/>
+            <input type="hidden" name="api_url" t-att-value="api_url"/>
+            
+            <div class="text-center mb-3">
+                <button type="button" class="btn btn-primary btn-lg" id="monnify-pay-button">
+                    <i class="fa fa-lock me-2"/>Pay with Monnify
+                </button>
+            </div>
+            
+            <div class="text-muted text-center small">
+                <i class="fa fa-shield me-1"/>Secured by Monnify
+            </div>
+        </div>
+    </template>
+
+    <!-- Redirect template for inline display -->
+    <template id="monnify_redirect" name="Monnify Redirect">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h3>Redirecting to Monnify...</h3>
+                    <p class="text-muted">Please wait while we redirect you to complete your payment.</p>
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>
