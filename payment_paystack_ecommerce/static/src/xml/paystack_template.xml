@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="payment_paystack_ecommerce.error_dialog">
+        <Dialog title="'Error'" contentClass="'o_payment_paystack_error'">
+            <p t-esc="props.message"/>
+            <t t-set-slot="footer">
+                <button class="btn btn-primary" t-on-click="props.close">Close</button>
+            </t>
+        </Dialog>
+    </t>
+</templates>
